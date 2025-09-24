@@ -1,0 +1,28 @@
+/* Social Media Section - Responsividade otimizada */
+.social-media {
+  margin-top: -55px;
+    padding:5px; /* REDUZIDO: de --spacing-xl para --spacing-md */
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: clamp(8px, 2.6vw, 16px);
+    flex-wrap: wrap;
+    padding: 0 var(--container-padding);
+}
+
+.social-icon {
+    width: clamp(24px, 10.9vw, 50px);
+    height: clamp(24px, 10.9vw, 50px);
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}

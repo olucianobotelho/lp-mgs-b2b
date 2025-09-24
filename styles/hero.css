@@ -1,0 +1,241 @@
+/* SEÇÃO HERO - CONTAINER PRINCIPAL */
+.hero {
+    position: relative;
+    max-height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible; /* MUDADO: Permite visibilidade de elementos */
+    padding: var(--spacing-lg) 0; /* ADICIONADO: Padding para evitar colisões */
+    margin-bottom: var(--spacing-xs); /* REDUZIDO: Menor espaço para próxima seção */
+}
+
+/* RESPONSIVIDADE: Ajustes para resoluções acima de 767px */
+@media (min-width: 768px) {
+    .hero {
+        max-height: none; /* Remove limitação de altura */
+        padding: var(--spacing-xl) 0; /* Aumenta padding */
+        margin-bottom: var(--spacing-sm); /* REDUZIDO: Menor espaço inferior */
+        position: relative; /* ADICIONADO: Posiciona relativo para elementos filhos */
+    }
+}
+
+/* Video Player - Melhorado para responsividade */
+.video-player {
+    margin-bottom: var(--spacing-xs);
+    display:block;
+    justify-content: center;
+    padding: 0 var(--spacing-sm);
+    position: relative;
+    /* Removido transform que estava deslocando o vídeo */
+}
+
+/* RESPONSIVIDADE: Ajustes do video player para resoluções acima de 767px */
+@media (min-width: 768px) {
+    .video-player {
+        padding: 0 var(--spacing-mx); /* Aumenta padding lateral */
+        margin-bottom: var(--spacing-xs); /* Aumenta espaço inferior */
+        max-width: var(--container-max-width); /* Limita largura máxima */
+        margin-left: auto; /* Centraliza horizontalmente */
+        margin-right: auto; /* Centraliza horizontalmente */
+    }
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: clamp(300px, 90vw, 600px);
+    aspect-ratio: 16/9;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+/* RESPONSIVIDADE: Ajustes do video container para resoluções acima de 767px */
+@media (min-width: 768px) {
+    .video-container {
+        max-width: clamp(400px, 70vw, 800px); /* Aumenta tamanho máximo */
+        box-shadow: 0 16px 50px rgba(0, 0, 0, 0.2); /* Melhora sombra */
+    }
+}
+
+
+.video-container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.video-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.video-placeholder::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 49%, rgba(255, 255, 255, 0.05) 50%, transparent 51%);
+    pointer-events: none;
+}
+
+/* BOTÃO DE PLAY - POSICIONAMENTO CONTROLADO */
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px; /* REDUZIDO: Tamanho menor */
+    height: 80px; /* REDUZIDO: Tamanho menor */
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 3; /* REDUZIDO: z-index menor para evitar conflitos */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* REDUZIDO: Sombra menor */
+}
+
+.play-button:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.play-button svg {
+    transition: all 0.3s ease;
+}
+
+.video-placeholder:hover .play-button svg {
+    filter: brightness(1.1);
+}
+
+/* OVERLAY DO VÍDEO - CONTROLE DE SOBREPOSIÇÃO */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* REDUZIDO: Overlay mais sutil */
+    z-index: 1; /* REDUZIDO: z-index menor */
+    pointer-events: none;
+}
+
+.video-title {
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-bold);
+    font-size: clamp(14px, 3.5vw, 18px);
+    color: white;
+    margin: 0 0 clamp(4px, 1vw, 8px) 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.video-description {
+    font-family: var(--font-secondary);
+    font-size: clamp(12px, 2.5vw, 14px);
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsividade específica para o player - Otimizada com clamp() */
+.video-player {
+    padding: 0 var(--container-padding);
+    margin-bottom: var(--spacing-lg);
+    
+}
+
+.video-container {
+    max-width: var(--container-max-width);
+    aspect-ratio: 16/9;
+
+}
+
+.play-button svg {
+    width: clamp(32px, 15.6vw, 60px);
+    height: clamp(32px, 15.6vw, 60px);
+}
+
+/* Botão CTA abaixo do vídeo */
+.cta-button-container {
+    display: flex;
+    justify-content: center;
+    width: clamp(80vw, 21.3vw, 60px);
+    margin-top: 0; /* Reduzido em 50% */
+}
+
+/* RESPONSIVIDADE: A partir de 525px, adiciona espaço de 20px do player de vídeo */
+@media (min-width: 525px) {
+    .cta-button-container {
+        margin-top: 20px; /* Espaço de 20px do player de vídeo */
+        transform: scale(1.1) translateY(20%);
+    }
+
+
+/* RESPONSIVIDADE: Ajustes do CTA para resoluções acima de 767px */
+@media (min-width: 768px) {
+    .cta-button-container {
+        margin-top: 40px; /* Espaço adequado do player de vídeo */
+        max-width: var(--container-max-width); /* Limita largura máxima */
+        margin-left: auto; /* Centraliza horizontalmente */
+        margin-right: auto; /* Centraliza horizontalmente */
+        width: auto; /* Remove limitação de largura */
+    }
+}
+
+.cta-button {
+    width: 100%; /* Reduz o tamanho em 20% */
+    transform: scale(1.5) translateY(-20%);
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    background: transparent; /* Remove o fundo preto */
+    border: none; /* Remove qualquer borda */
+}
+
+
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    transition: left 0.5s;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+}
+
+.cta-button:hover::before {
+    left: 100%;
+}
+
+.discount-badge {
+    background: var(--gradient-discount);
+    border-radius: var(--border-radius-xl);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    display: inline-block;
+    box-shadow: 0 6px 18px rgba(217, 0, 0, 0.35);
+}
+
+.discount-badge span {
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-extrabold);
+    font-size: var(--font-size-large);
+    color: var(--text-primary);
+}}

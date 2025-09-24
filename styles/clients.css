@@ -1,0 +1,60 @@
+/* Clients Section - Ajustado conforme Figma */
+.clients {
+    padding: var(--spacing-md) 0; /* REDUZIDO: Menor padding superior */
+    text-align: center;
+}
+
+.section-title {
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-extrabold);
+    font-size: var(--font-size-xl);
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+}
+
+/* Ajuste específico do título da seção de clientes conforme Figma */
+.clients .section-title {
+    font-family: var(--font-secondary);
+    font-weight: var(--font-weight-bold);
+    font-size: calc(var(--font-size-large) * 0.84); /* Reduz 16% */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.1;
+}
+
+/* GRID de clientes atualizado para manter tudo na mesma linha */
+.clients-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: calc(var(--spacing-md) * 0.84); /* Reduz 16% */
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.client-logo {
+    width: calc(80px * 0.84); /* Reduz 16% - de 80px para ~67px */
+    height: auto;
+    flex: 0 0 auto;
+    object-fit: contain;
+    filter: brightness(0.9);
+    transition: filter 0.3s ease;
+}
+
+.client-logo:hover {
+    filter: brightness(1);
+}
+
+/* Estilo para a imagem "Nossos Clientes" */
+.clients-banner {
+    width: 100vw;
+    max-width: clamp(300px, 90vw, 500px);
+    height: auto;
+    object-fit: contain;
+    margin-bottom: var(--spacing-md);
+}

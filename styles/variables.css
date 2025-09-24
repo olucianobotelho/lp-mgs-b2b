@@ -1,0 +1,73 @@
+/* Variáveis CSS extraídas do Figma */
+:root {
+    /* Cores principais - Ajustadas conforme Figma */
+    --bg-primary: #0F0F10;
+    --text-primary: #FFFFFF;
+    --text-secondary: #A2A6A9;
+    --text-accent: #D6D6D6;
+    --text-dark: #000000;
+    
+    /* Cores de gradiente - Baseadas no Figma */
+    --gradient-text: linear-gradient(180deg, #FFE14D 0%, #E0B800 100%);
+    --gradient-discount: linear-gradient(180deg, #FF0000 0%, #D90000 100%);
+    --gradient-button: linear-gradient(180deg, #FFE14D 0%, #E0B800 100%);
+    
+    /* Cores de botões */
+    --button-primary: #FFE14D;
+    --button-secondary: #E0B800;
+    --button-shadow: rgba(224, 184, 0, 0.45);
+    
+    /* Cores de cards - Ajustadas conforme Figma */
+    --card-bg: #313131;
+    --card-light: #FFFFFF;
+    --placeholder-bg: #D9D9D9;
+    
+    /* Cores específicas do Figma para elementos */
+    --figma-gray-light: #F5F5F5;
+    --figma-gray-medium: #CCCCCC;
+    --figma-shadow-color: rgba(0, 0, 0, 0.25);
+    --figma-border-color: rgba(255, 255, 255, 0.1);
+    
+    /* Tipografias - Ajustadas conforme Figma */
+    --font-primary: 'Montserrat', sans-serif;
+    --font-secondary: 'Poppins', sans-serif;
+    
+    /* Tamanhos de fonte otimizados para resoluções de 320px até 414px */
+    /* Incluindo dispositivos muito pequenos como iPhone SE (320px) até iPhone 11 Pro Max (414px) */
+    --font-size-xs: clamp(9px, 3.1vw, 12px);
+    --font-size-small: clamp(11px, 3.8vw, 14px);
+    --font-size-medium: clamp(13px, 4.7vw, 18px);
+    --font-size-large: clamp(16px, 5.6vw, 22px);
+    --font-size-xl: clamp(20px, 6.9vw, 28px);
+    --font-size-xxl: clamp(24px, 9.4vw, 36px);
+    --font-size-hero: clamp(28px, 11.9vw, 44px);
+    
+    /* Pesos de fonte específicos do Figma */
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+    
+    /* Espaçamentos responsivos otimizados para resoluções 320px-414px */
+    --spacing-xs: clamp(4px, 2.5vw, 10px);
+    --spacing-sm: clamp(8px, 5.0vw, 20px);
+    --spacing-md: clamp(14px, 7.5vw, 28px);
+    --spacing-lg: clamp(20px, 10.0vw, 36px);
+    --spacing-xl: clamp(28px, 15.0vw, 52px);
+    --spacing-xxl: clamp(36px, 20.0vw, 68px);
+    
+    /* Espaçamentos específicos otimizados */
+    --section-spacing: clamp(12px, 1.6vw, 30px);
+    --element-spacing: clamp(16px, 7.8vw, 30px);
+    
+    /* Container responsivo otimizado com margens laterais */
+    --container-padding: clamp(20px, 8.5vw, 35px);
+    --container-max-width: clamp(480px, 95vw, 580px);
+    
+    /* Border radius responsivo otimizado */
+    --border-radius-sm: clamp(2px, 1.0vw, 4px);
+    --border-radius-md: clamp(3px, 1.3vw, 5px);
+    --border-radius-lg: clamp(5px, 2.9vw, 12px);
+    --border-radius-xl: clamp(28px, 14.7vw, 50px);
+}

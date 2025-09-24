@@ -1,0 +1,228 @@
+/* Header - Atualizado para nova imagem */
+.header {
+    padding: var(--spacing-sm) 0 0 0; /* Remove padding bottom */
+    position: relative;
+    margin-bottom: -20px; /* Margin negativo para colar na próxima seção */
+}
+
+.header .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0; /* Reduzido para 20% do valor original */
+}
+
+.header-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: contain;
+    transform: translateY(-5%); /* Move a imagem 10% para cima */
+}
+
+/* Container do Player de Vídeo no Header - Design Limpo sem Borda */
+.video-player-container {
+    width: 100%;
+    max-width: clamp(200px, 60vw, 350px);
+    height: clamp(280px, 70vw, 450px);
+    background: transparent; /* Fundo transparente */
+    border-radius: 0; /* Remove border radius */
+    padding: 0; /* Remove padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none; /* Remove borda completamente */
+    margin: 0;
+    aspect-ratio: 9/16;
+    backdrop-filter: none; /* Remove glassmorphism */
+    box-shadow: none; /* Remove sombra */
+    transition: none; /* Remove transições */
+}
+
+.video-player-container:hover {
+    transform: none; /* Remove hover effects */
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.video-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(var(--spacing-sm), 3vw, var(--spacing-md));
+    text-align: center;
+}
+
+.play-button {
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: clamp(48px, 12vw, 72px); /* Botão ligeiramente maior */
+    height: clamp(48px, 12vw, 72px);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.play-button:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+}
+
+.play-button svg {
+    width: 60%;
+    height: 60%;
+    fill: var(--text-primary);
+    opacity: 0.9;
+}
+
+.video-text {
+    color: var(--text-primary);
+    font-size: clamp(var(--font-size-sm), 3.5vw, var(--font-size-md));
+    font-weight: var(--font-weight-medium);
+    margin: 0;
+    line-height: 1.4;
+    opacity: 0.8;
+}
+
+.hero {
+    margin-bottom: var(--section-spacing);
+    padding: var(--element-spacing) 0;
+}
+
+.clients {
+    margin-bottom: var(--section-spacing);
+    padding: var(--spacing-xl) 0;
+}
+
+.product-caneca {
+    margin-bottom: var(--section-spacing);
+    padding: var(--spacing-xl) 0;
+}
+
+.product-canetas {
+    margin-bottom: var(--section-spacing);
+    padding: var(--spacing-xl) 0;
+}
+
+.pricing-kits {
+    margin-bottom: var(--section-spacing);
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+}
+
+.pricing-kits .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.faq {
+    margin-bottom: var(--section-spacing);
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+}
+
+.faq .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-media {
+    margin-bottom: 0;
+    padding: var(--spacing-md) 0;
+}
+
+/* Header - Ajustado conforme Figma */
+.header {
+    padding: var(--spacing-sm) 0;
+    position: relative;
+    margin-bottom: 0;
+}
+
+.header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+/* RESPONSIVIDADE: Ajustes do header para resoluções acima de 767px */
+@media (min-width: 768px) {
+    .header {
+        padding: var(--spacing-md) 0; /* Aumenta padding */
+        margin-bottom: var(--spacing-sm); /* Adiciona espaço inferior */
+    }
+    
+    .header .container {
+        flex-direction: column; /* Mantém vertical para mostrar imagem acima */
+        justify-content: center; /* Centraliza conteúdo */
+        align-items: center;
+        gap: var(--spacing-md);
+        max-width: var(--container-max-width);
+        margin: 0 auto;
+        padding: 0 var(--container-padding);
+        width: 100%; /* Garante largura total */
+    }
+    
+    .header-image {
+        max-width: 600px; /* Aumenta tamanho da imagem para desktop */
+        margin: 0 auto var(--spacing-md) auto; /* Centraliza horizontalmente e adiciona espaço abaixo */
+        display: block; /* Garante que seja tratada como bloco para centralização */
+        width: 100%; /* Permite que a imagem use toda a largura disponível até o max-width */
+    }
+    
+    .video-player-container {
+        max-width: clamp(300px, 50vw, 400px); /* Ajusta tamanho do player no header */
+        height: clamp(350px, 60vw, 500px); /* Ajusta altura proporcionalmente */
+        margin: 0 auto; /* Centraliza o player */
+        display: block; /* Garante que seja tratado como bloco */
+    }
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+/* RESPONSIVIDADE: Ajustes da logo para resoluções acima de 767px */
+@media (min-width: 768px) {
+    .logo {
+        width: 100px; /* Aumenta tamanho da logo */
+    }
+}
+
+.offer-banner {
+    background-color: var(--placeholder-bg);
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    width: 100%;
+    text-align: center;
+}
+
+/* RESPONSIVIDADE: Ajustes do banner para resoluções acima de 767px */
+@media (min-width: 768px) {
+    .offer-banner {
+        width: auto; /* Remove largura total */
+        min-width: 200px; /* Define largura mínima */
+        padding: var(--spacing-sm) var(--spacing-lg); /* Aumenta padding */
+    }
+}
+
+.offer-text {
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-medium);
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}

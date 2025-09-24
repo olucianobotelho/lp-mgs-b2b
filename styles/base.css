@@ -1,0 +1,129 @@
+/* Base styles */
+html {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
+body {
+    font-family: var(--font-secondary);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.5;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100vw;
+    position: relative;
+}
+
+.container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* Section Spacing - Ajustado conforme solicitação */
+section {
+    position: relative;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section .container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+    width: 100%;
+}
+
+.header {
+    margin-bottom: var(--section-spacing);
+    padding: var(--spacing-sm) 0;
+}
+
+.hero {
+    margin-bottom: var(--section-spacing);
+    padding: var(--element-spacing) 0;
+    text-align: center;
+}
+
+.hero .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.clients {
+    margin-bottom: calc(var(--section-spacing) * 0.84); /* Reduz 16% */
+    padding: calc(var(--spacing-xl) * 0.84) 0; /* Reduz 16% */
+    text-align: center;
+}
+
+.clients .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-caneca {
+    margin-bottom: var(--section-spacing);
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+}
+
+.product-caneca .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-canetas {
+    margin-bottom: var(--section-spacing);
+    padding: var(--spacing-xl) 0;
+}
+
+.pricing-kits {
+    margin-bottom: var(--section-spacing);
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+}
+
+.pricing-kits .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.faq {
+    margin-top: -110px;
+    margin-bottom: var(--section-spacing);
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+}
+
+.faq .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-media {
+    position: relative;
+    margin-top: -100px;
+    margin-bottom: 0;
+    padding: var(--spacing-md) 0;
+}
