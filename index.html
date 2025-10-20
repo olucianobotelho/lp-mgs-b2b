@@ -7,35 +7,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/variables.css">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/hero.css">
-    <link rel="stylesheet" href="styles/clients.css">
-    <link rel="stylesheet" href="styles/products.css">
-    <link rel="stylesheet" href="styles/pricing.css">
-    <link rel="stylesheet" href="styles/faq.css">
-    <link rel="stylesheet" href="styles/social.css">
-    <link rel="stylesheet" href="styles/footer.css">
-    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="styles/figma-styles.css">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
     <!-- Header -->
     <header class="header">
         <div class="container">
-            <img src="assets/images/header.png" alt="MGS Personalizados - Oferta Especial" class="header-image">
+            <!-- Logo MGS -->
+            <img src="assets/images/header.png" alt="MGS Personalizados" class="logo-mgs">
             
             <!-- Container para Player de Vídeo -->
             <div class="video-player-container">
                 <div class="video-placeholder">
+                   
                     <div class="play-button">
                         <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="30" cy="30" r="30" fill="rgba(255, 255, 255, 0.9)"/>
                             <polygon points="24,18 24,42 42,30" fill="#333"/>
                         </svg>
                     </div>
-                    <p class="video-text">Clique para assistir o vídeo</p>
                 </div>
             </div>
         </div>
@@ -44,27 +36,11 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <!-- Video Player -->
-            <div class="video-player">
-                <div class="video-container">
-                    <div class="video-placeholder">
-                        <div class="play-button">
-                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="30" cy="30" r="30" fill="rgba(255, 255, 255, 0.9)"/>
-                                <path d="M24 18L42 30L24 42V18Z" fill="#333"/>
-                            </svg>
-                        </div>
-                        <div class="video-overlay">
-                            <h3 class="video-title">Veja nossos produtos personalizados</h3>
-                            <p class="video-description">Clique para assistir</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Botão CTA abaixo do vídeo -->
-            <div class="cta-button-container">
-                <img src="assets/images/BOTÃO CTA 1.svg" alt="Garantir Promoção" class="cta-button">
+            <!-- Botão CTA Principal -->
+            <div class="main-cta-container">
+                <button class="main-cta-button">
+                    <span class="cta-text">FAÇA UM ORÇAMENTO</span>
+                </button>
             </div>
         </div>
     </section>
@@ -72,53 +48,43 @@
     <!-- Seção de Clientes -->
     <section class="clients">
         <div class="container">
-            <img src="assets/images/nossosclientes.png" alt="Nossos Clientes" class="clients-banner">
-        </div>
-    </section>
-
-    <!-- Caneca Section -->
-    <section class="product-caneca">
-        <img src="assets/images/CANECA TITLE.svg" alt="Título da Caneca" class="caneca-title">
-        <div class="caneca-container">
-            <img src="assets/images/Qualidades Caneca.svg" alt="Qualidades da Caneca" class="qualidades-caneca">
-            <img src="assets/images/caneca.svg" alt="Caneca personalizada" class="caneca-svg">
-        </div>
-    </section>
-
-    <!-- Canetas Section -->
-    <section class="product-canetas">
-        <img src="assets/images/Canetas.svg" alt="Canetas de Colorir" class="canetas-img">
-    </section>
-
-    <!-- Kits de Preços -->
-    <section class="pricing-kits">
-        <div class="container">
-            <!-- Kit em Dobro -->
-            <div class="kit-group">
-                 <!-- Destaque de preço (botão de desconto) -->
-                
-                <!-- Card principal Kit em Dobro -->
-                <div class="kit-card-svg">
-                    <img src="assets/images/cardcompleto.svg" alt="Kit em Dobro" class="kit-card-svg">
-                </div>
-                
-                <!-- Botão Kit em Dobro -->
-                <div class="kit-button-svg">
-                    <img src="assets/images/BOTÃO-kitemdobro.svg" alt="Botão Kit em Dobro" class="kit-button-img">
-                </div>
+            <h2 class="section-title clients-title">Nossos Clientes</h2>
+            <div class="clients-grid">
+                <img src="assets/images/cliente-1.png" alt="Cliente 1" class="client-logo">
+                <img src="assets/images/cliente-2.png" alt="Cliente 2" class="client-logo">
+                <img src="assets/images/cliente-3.png" alt="Cliente 3" class="client-logo">
+                <img src="assets/images/cliente-4.png" alt="Cliente 4" class="client-logo">
             </div>
+        </div>
+    </section>
 
-            <!-- Super Kit -->
-            <div class="kit-group">
-                <!-- Card principal Super Kit -->
-                <div class="kit-card-svg">
-                    <img src="assets/images/cardcompletosuper.svg" alt="Super Kit" class="kit-card-svg">
-                </div>
-                
-                <!-- Botão Super Kit -->
-                <div class="kit-button-svg">
-                    <img src="assets/images/botão-superkit.svg" alt="Botão Super Kit" class="kit-button-img">
-                </div>
+    <!-- Seção DTF UV -->
+    <section class="product-dtf-uv">
+        <div class="container">
+            <h2 class="section-title product-title">DTF UV</h2>
+            <img src="assets/images/dtf-uv.png" alt="DTF UV" class="product-image">
+            <p class="product-description">DTF UV entrega adesivos curados por luz UV com acabamento de vitrine para vidro, metal, madeira, acrílico e plásticos – pronto para aplicar e vender</p>
+        </div>
+    </section>
+
+    <!-- Seção DTF TEXTIL -->
+    <section class="product-dtf-textil">
+        <div class="container">
+            <h2 class="section-title product-title">DTF TEXTIL</h2>
+            <img src="assets/images/dtf-textil.png" alt="DTF TEXTIL" class="product-image">
+            <p class="product-description">DTF Têxtil estampa no filme e transfere por prensa térmica em algodão ou poliéster, com cores vivas e ótima resistência a lavagens.</p>
+        </div>
+    </section>
+
+
+    <!-- Redes Sociais -->
+    <section class="social-media">
+        <div class="container">
+            <h2 class="section-title social-title">NOSSAS REDES SOCIAIS</h2>
+            <div class="social-icons">
+                <img src="assets/images/social-1.png" alt="Rede Social 1" class="social-icon social-icon-1">
+                <img src="assets/images/social-2.png" alt="Rede Social 2" class="social-icon social-icon-2">
+                <img src="assets/images/social-3.png" alt="Rede Social 3" class="social-icon social-icon-3">
             </div>
         </div>
     </section>
@@ -126,33 +92,23 @@
     <!-- Dúvidas Frequentes -->
     <section class="faq">
         <div class="container">
-            <h2 class="section-title">Dúvidas Frequentes</h2>
+            <h2 class="section-title faq-title">DUVIDAS FREQUENTES</h2>
             
             <div class="faq-container">
-                <div class="faq-item active">
-                    <div class="faq-question">
-                        <span>VOCÊS POSSUEM CNPJ?</span>
-                        <span class="faq-arrow">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>SIM, POSSUIMOS CNPJ, NUMERO XXXXXXXXX/XXXX-XX</p>
-                    </div>
-                </div>
-
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>ONDE FICA A LOJA?</span>
-                        <span class="faq-arrow">▼</span>
+                        <span>POSSO PAGAR NO PIX?</span>
+                        <span class="faq-arrow"></span>
                     </div>
                     <div class="faq-answer">
-                        <p>Nossa loja fica localizada na Rua Carolina Machado 488 loja A em Madureira, Rio de Janeiro - RJ</p>
+                        <p>Sim, aceitamos pagamento via PIX.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question">
                         <span>PARCELA NO CARTÃO?</span>
-                        <span class="faq-arrow">▼</span>
+                        <span class="faq-arrow"></span>
                     </div>
                     <div class="faq-answer">
                         <p>Sim, aceitamos parcelamento no cartão de crédito.</p>
@@ -161,23 +117,25 @@
 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>POSSO PAGAR NO PIX?</span>
-                        <span class="faq-arrow">▼</span>
+                        <span>ONDE FICA A LOJA?</span>
+                        <span class="faq-arrow"></span>
                     </div>
                     <div class="faq-answer">
-                        <p>Sim, aceitamos pagamento via PIX.</p>
+                        <p>Nossa loja fica localizada na Rua Carolina Machado 488 loja A em Madureira, Rio de Janeiro - RJ</p>
+                        <p>Temos uma loja na Galeria do Mercadão de Madureira, Galeria H Ljs 122-124 </p>
+                    </div>
+                </div>
+
+                <div class="faq-item active">
+                    <div class="faq-question">
+                        <span>VOCÊS POSSUEM CNPJ?</span>
+                        <span class="faq-arrow"></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>SIM, POSSUIMOS CNPJ, NUMERO XXXXXXXXX/XXXX-XX</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Redes Sociais -->
-    <section class="social-media">
-        <div class="social-icons">
-            <img src="assets/images/social-1.png" alt="Rede Social 1" class="social-icon">
-            <img src="assets/images/social-2.png" alt="Rede Social 2" class="social-icon">
-            <img src="assets/images/social-3.png" alt="Rede Social 3" class="social-icon">
         </div>
     </section>
 

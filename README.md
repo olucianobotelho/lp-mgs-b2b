@@ -1,6 +1,10 @@
-# MGS Personalizados - Landing Page
+# MGS Personalizados - Landing Page B2B
 
 Landing page desenvolvida para MGS Personalizados, seguindo rigorosamente o design especificado no Figma com abordagem mobile first.
+
+## 📌 Repositório
+
+GitHub: [lp-mgs-b2b](https://github.com/olucianobotelho/lp-mgs-b2b.git)
 
 ## 🎨 Design
 
@@ -56,19 +60,23 @@ O projeto foi desenvolvido com base no design do Figma: [MGS - B2C](https://www.
 ```
 mgs-landingpage/
 ├── index.html          # Estrutura HTML principal
-├── styles.css          # Estilos CSS com variáveis
 ├── script.js           # JavaScript para interatividade
 ├── README.md           # Documentação do projeto
-└── assets/
-    └── images/         # Imagens extraídas do Figma
-        ├── logo-mgs.png
-        ├── caneca-produto.png
-        ├── canetas-produto.png
-        ├── kit-dobro.png
-        ├── super-kit.png
-        ├── cliente-*.png
-        ├── social-*.png
-        └── icon-*.png
+├── styles/             # Arquivos CSS organizados
+│   ├── main.css        # Estilos principais consolidados
+│   ├── figma-styles.css # Estilos específicos do design Figma
+│   ├── reset.css       # Reset CSS para consistência
+│   └── variables.css   # Variáveis CSS (cores, fontes, etc.)
+├── assets/
+│   └── images/         # Imagens do projeto
+│       ├── header.png
+│       ├── logo-mgs.png
+│       ├── dtf-textil.png
+│       ├── dtf-uv.png
+│       ├── cliente-*.png
+│       ├── social-*.png
+│       └── nossosclientes.png
+└── vercel.json         # Configuração para deploy na Vercel
 ```
 
 ## 🎨 Paleta de Cores

@@ -1,23 +1,25 @@
-/* Variáveis CSS extraídas do Figma */
+/* Variáveis CSS extraídas do Figma - MGS B2C */
 :root {
-    /* Cores principais - Ajustadas conforme Figma */
+    /* Cores principais - Exatas do Figma */
     --bg-primary: #0F0F10;
     --text-primary: #FFFFFF;
     --text-secondary: #A2A6A9;
     --text-accent: #D6D6D6;
     --text-dark: #000000;
     
-    /* Cores de gradiente - Baseadas no Figma */
-    --gradient-text: linear-gradient(180deg, #FFE14D 0%, #E0B800 100%);
-    --gradient-discount: linear-gradient(180deg, #FF0000 0%, #D90000 100%);
-    --gradient-button: linear-gradient(180deg, #FFE14D 0%, #E0B800 100%);
+    /* Cores de gradiente - Exatas do Figma */
+    --gradient-text: linear-gradient(180deg, #FFFFFF 0%, #D6D6D6 50%, #BABABA 100%);
+    --gradient-text-yellow: linear-gradient(180deg, #FFFFFF 0%, #FFE14D 100%);
+    --gradient-partner: linear-gradient(180deg, #FEA937 0%, #F1E900 50%, #997A15 100%);
+    --gradient-social: linear-gradient(180deg, #F7FF00 39%, #EFF503 46%, #BFAE00 100%);
+    --gradient-button: linear-gradient(180deg, #F1E900 0%, #D3CC00 53%, #C0BA00 100%);
     
     /* Cores de botões */
-    --button-primary: #FFE14D;
-    --button-secondary: #E0B800;
-    --button-shadow: rgba(224, 184, 0, 0.45);
+    --button-primary: #F1E900;
+    --button-secondary: #C0BA00;
+    --button-shadow: rgba(192, 186, 0, 0.45);
     
-    /* Cores de cards - Ajustadas conforme Figma */
+    /* Cores de cards - Exatas do Figma */
     --card-bg: #313131;
     --card-light: #FFFFFF;
     --placeholder-bg: #D9D9D9;
@@ -27,6 +29,7 @@
     --figma-gray-medium: #CCCCCC;
     --figma-shadow-color: rgba(0, 0, 0, 0.25);
     --figma-border-color: rgba(255, 255, 255, 0.1);
+    --faq-arrow-color: #0A0A0A;
     
     /* Tipografias - Ajustadas conforme Figma */
     --font-primary: 'Montserrat', sans-serif;
